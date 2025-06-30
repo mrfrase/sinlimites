@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página con Video Adsterra</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .banner {
+            width: 100%;
+            height: 90px;
+            background-color: #222;
+            margin: 10px 0;
+        }
+
+        .video-container {
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        video {
+            width: 100%;
+            max-width: 600px;
+            cursor: pointer;
+        }
+
+        #playButton {
+            padding: 12px 24px;
+            font-size: 18px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        h2 {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Banner Superior -->
+    <div class="banner">
+        <!-- Aquí puedes poner tu código de banner Adsterra -->
+        <script type="text/javascript">
+            atOptions = {
+                'key': 'TU_KEY_ADSTERRA',
+                'format': 'iframe',
+                'height': 90,
+                'width': 728,
+                'params': {}
+            };
+            document.write('<scr' + 'ipt type="text/javascript" src="//www.profitableratecpm.com/TU_KEY_ADSTERRA.js"></scr' + 'ipt>');
+        </script>
+    </div>
+
+    <!-- Título del Video -->
+    <h2 id="videoTitle">Mira el Video Completo</h2>
+
+    <!-- Botón de Reproducción -->
+    <button id="playButton">Play Video</button>
+
+    <!-- Contenedor del Video -->
+    <div class="video-container" id="videoContainer" style="display:none;">
+        <video id="myVideo" src="video.mp4" controls></video>
+    </div>
+
+    <!-- Banner Inferior -->
+    <div class="banner">
+        <!-- Otro banner Adsterra -->
+        <script type="text/javascript">
+            atOptions = {
+                'key': 'TU_KEY_ADSTERRA2',
+                'format': 'iframe',
+                'height': 90,
+                'width': 728,
+                'params': {}
+            };
+            document.write('<scr' + 'ipt type="text/javascript" src="//www.profitableratecpm.com/TU_KEY_ADSTERRA2.js"></scr' + 'ipt>');
+        </script>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        const smartLink = "https://www.profitableratecpm.com/f9i33hr9d2?key=03d7472f6eb5ea24b3277a1c3a50bf56"; // REEMPLAZAR
+
+        // Cuando el usuario hace clic en el video, se redirige al enlace
+        document.getElementById("myVideo").addEventListener("click", function () {
+            window.location.href = smartLink;
+        });
+
+        // Al hacer clic en el botón Play
+        document.getElementById("playButton").addEventListener("click", function () {
+            document.getElementById("playButton").innerText = "Cargando...";
+            setTimeout(function () {
+                document.getElementById("playButton").style.display = "none";
+                document.getElementById("videoContainer").style.display = "block";
+                document.getElementById("myVideo").play();
+            }, 6000); // 6 segundos
+        });
+    </script>
+
+</body>
+</html>
