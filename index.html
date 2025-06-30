@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Promo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+      text-align: center;
+    }
+    .banner {
+      background-color: #ff4444;
+      padding: 15px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .video-container {
+      position: relative;
+      display: inline-block;
+      margin: 20px auto;
+    }
+    .video-title {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+    }
+    video {
+      width: 100%;
+      max-width: 640px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Banner Superior -->
+  <div class="banner">🔥 OFERTA ESPECIAL SOLO HOY 🔥</div>
+
+  <!-- Contenedor del video con título -->
+  <div class="video-container">
+    <div class="video-title">Tu Título Aquí</div>
+    <video id="promoVideo" autoplay muted playsinline>
+      <source src="tu-video.mp4" type="video/mp4">
+      Tu navegador no soporta HTML5 video.
+    </video>
+  </div>
+
+  <!-- Banner Inferior -->
+  <div class="banner">⬇️ HAZ CLIC EN EL VIDEO PARA VER MÁS ⬇️</div>
+
+  <script>
+    // Enlace encriptado (puedes reemplazarlo)
+    const encryptedURL = atob("aHR0cHM6Ly93d3cucHJvZml0YWJsZXJhdGVjcG0uY29tL2Y5aTMzaHI5ZDI/a2V5PTAzZDc0NzJmNmViNWVhMjRiMzI3N2ExYzNhNTBiZjU2"); // <-- aquí va tu smartlink en base64
+
+    document.getElementById("promoVideo").addEventListener("click", function () {
+      window.location.href = encryptedURL;
+    });
+  </script>
+
+</body>
+</html>
